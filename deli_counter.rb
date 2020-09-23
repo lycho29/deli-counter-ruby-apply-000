@@ -10,7 +10,7 @@ def line(katz_deli)
 else
   message="The line is currently:"
   katz_deli.each_with_index do |value, index|
-  message += " #{index.to_i+1}. #{value}"
+  message += " #{index+1}. #{value}"
   end
     puts "#{message}"
 end
@@ -18,6 +18,12 @@ end
 def take_a_number(katz_deli, name)
   katz_deli << name
   puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+end
+
+$index = 1
+def take_a_number 
+  puts "Welcome, you have number #{$index}."
+  $index += 1
 end
 
 def now_serving(katz_deli)
